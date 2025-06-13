@@ -1,0 +1,27 @@
+Atividades semana 2
+
+1) Diferencie CI, CD e Deploy Contínuo
+CI significa "integração contínua", e é uma metodologia de desenvolvimento onde cada desenvolvedor envolvido mescla ("merge") as alterações de código com as quais tem trabalhado em paralelo ("branch") com o repositório principal do código do sistema ("commit") sempre que possível. De forma orgânica, isso deve conduzir o desenvolvedor a realizar cada mescla com pequenas alterações de código, o que é a boa prática recomendada.
+
+Pequenas alterações são mais fáceis de terem a aderência ao código principal verificada. Esse tipo de integração também enfatiza a automação de testes para verificar se a aplicação não é quebrada sempre que novos commits são integrados ao branch principal.
+
+CD significa "entrega contínua", e é uma espécie de evolução da CI, pois possibilita automatizar a mescla das alterações de código ao código principal. Para além dos testes automatizados, podem ser implantados os lançamentos de versão ("releases") também de forma automatizada.
+
+Deploy Contínuo ou Implantação Contínua é um passo além na CD. Nesse cenário, toda a "esteira de produção" desde o teste de aderência nos códigos que estão sendo entregues pelos desenvolvedores, passando pelas validações de segurança até a entrega de novas versões, são feitas de forma automatizada. A intervenção humana é desnecessária durante o processo, salvo em caso de algum teste com falha.
+
+2) Explique o pipeline de entrega
+a.Build 
+Nessa etapa, o código é puxado de um repositório privado ou público e o artefato binário da entrega é compilado.
+
+b.Test
+Nessa etapa, o artefato compilado passa por testes que validam a aderência da alteração de código ao sistema.
+
+c.Release
+Nessa etapa, o artefato é preparado e disponibilizado para colocação em produção, e receberá um código de versão. 
+
+d.Deploy
+Nessa etapa, o artefato compilado, testado e disponibilizado é finalmente, colocado em produção.
+
+
+3) Cite ao menos um padrão de release e sua utilidade
+A Canary Release coloca no ar a nova versão apenas para um pequeno grupo de usuários finais. Eles farão o "teste final" do sistema, antes da liberação irrestrita para uso. Esse método permite monitorar a aceitação dos usuários e a identificação de últimos problemas antes de uma implantação de forma ampla.
